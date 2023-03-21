@@ -16,3 +16,7 @@ def test_items_init(item_1):
 
 def test_calculate_total_price(item_1):
     assert item_1.calculate_total_price == 200000.0
+
+
+def test_apply_discount():
+    assert item_1.apply_discount == 8500.0
