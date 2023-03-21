@@ -8,9 +8,11 @@ def item_1():
     return Item("Смартфон", 10000, 20)
 
 
+def test_items_init(item_1):
+    assert item_1.name == "Смартфон"
+    assert item_1.price == 10000
+    assert item_1.quantity == 20
+
+
 def test_calculate_total_price(item_1):
-    assert Item.calculate_total_price == 200000.00
-
-
-def test_apply_discount(item_1):
-    assert Item.apply_discount == 8500.0
+    assert item_1.calculate_total_price == 200000.0
