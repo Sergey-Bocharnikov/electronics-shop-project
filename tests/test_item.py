@@ -9,14 +9,17 @@ def item_1():
 
 
 def test_items_init(item_1):
+    """Тест атрибутов"""
     assert item_1.name == "Смартфон"
     assert item_1.price == 10000
     assert item_1.quantity == 20
 
 
 def test_calculate_total_price(item_1):
+    """Тест общей стоимости на товар"""
     assert item_1.calculate_total_price() == 200000.0
 
 
 def test_apply_discount(item_1):
+    """Тест скидки на товар"""
     assert item_1.apply_discount() == 8500.0
